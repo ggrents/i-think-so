@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\i-think-so.props" />
+</Project>
