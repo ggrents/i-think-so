@@ -44,3 +44,9 @@ C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\
 C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\BCrypt.Net.dll
+C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\user\Desktop\i-think-so\backend\i-think-so\i-think-so\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

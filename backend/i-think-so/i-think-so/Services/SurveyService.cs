@@ -37,7 +37,8 @@ namespace i_think_so.Services
 
         public async Task<List<Survey>> GetSurveysByUserId(string userId)
         {
-            return await _surveys.Find(survey => survey.UserId == userId).ToListAsync();
+            var objectId = ObjectId.Parse(userId);
+            return await _surveys.Find(survey => survey.UserId == objectId).ToListAsync();
         }
 
         public async Task AddSurvey(Survey survey)

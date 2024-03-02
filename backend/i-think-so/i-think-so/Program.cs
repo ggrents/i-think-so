@@ -1,3 +1,4 @@
+using i_think_so.Services;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 
@@ -13,7 +14,7 @@ namespace i_think_so
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton(new MongoClient(builder.Configuration.GetConnectionString("MongoDB")).GetDatabase(builder.Configuration.GetValue<string>("MongoDBSettings:DatabaseName")));
- 
+            builder.Services.AddScoped<ISurveyService, SurveyService>();
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
@@ -23,6 +24,7 @@ namespace i_think_so
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
 
