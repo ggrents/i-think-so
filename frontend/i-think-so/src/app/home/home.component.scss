@@ -1,0 +1,39 @@
+.survey-card {
+  padding: 10px 10px 0 0;
+  background-color: #f4f8fd;
+  width: 67%;
+  margin: 5% auto;
+  height: 500px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .options {
+    align-self: flex-end;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-around;
+  }
+  img {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  span {
+    font-size: 2.5rem;
+  }
+}
