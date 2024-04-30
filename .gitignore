@@ -1,0 +1,8 @@
+
+frontend/.vscode/
+
+frontend/node_modules/
+
+backend/bin/
+backend/obj/
+backend/.vs/
