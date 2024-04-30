@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 40%;
+  h1 {
+    font-size: 5vw;
+  }
+  form {
+    width: 60%;
+    input {
+      width: 100%;
+
+      height: 35px;
+      margin-bottom: 5%;
+    }
+  }
+  button {
+    width: 80%;
+  }
+}
+
+.additional {
+  color: white;
+  font-size: 1.5rem;
+  span {
+    color: #fe6d2f;
+  }
+}

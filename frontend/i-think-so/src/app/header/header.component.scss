@@ -1,0 +1,57 @@
+.wrapper {
+  padding: 0 10%;
+  gap: 30%;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  background-color: #ff7400;
+
+  .input_field {
+    position: relative;
+
+    .pi {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input {
+      width: 160px;
+      height: 30px;
+      border: 2px solid black;
+      // border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 30%;
+      font-size: 14px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .inp {
+    i {
+      height: 100px;
+    }
+  }
+
+  h1 {
+    color: #f4f8fd;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    cursor: pointer;
+  }
+
+  .icons {
+    display: flex;
+    gap: 30%;
+    span {
+      cursor: pointer;
+    }
+    .icn {
+      font-size: 1.5rem;
+    }
+  }
+}
