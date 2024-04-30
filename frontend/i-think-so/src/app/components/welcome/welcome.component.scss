@@ -1,0 +1,75 @@
+.wrapper {
+  background-color: #193dfb;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .title {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    width: 55%;
+    height: 59%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    h1 {
+      font-size: 7vw;
+    }
+    p {
+      color: #ffffff;
+      font-weight: 300;
+      font-size: 2vw;
+    }
+
+    .button-cont {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .logged-out {
+        align-self: flex-end;
+        color: #ffffff;
+        font-weight: 300;
+        cursor: pointer;
+      }
+      .logged-out:hover {
+        color: #fe6d2f;
+      }
+
+      .buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 45px;
+        justify-content: center;
+
+        button {
+          min-width: 200px;
+          font-size: 2vw;
+          font-weight: 800;
+          background-color: #fe6d2f;
+          color: #193dfb;
+          cursor: pointer;
+          border: none;
+          border-radius: 3px;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+          transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+          background-color: #193dfb;
+          color: #fe6d2f;
+        }
+      }
+    }
+  }
+}
+
+img {
+  position: absolute;
+  bottom: -100px;
+  right: -80px;
+  width: 55%;
+  height: 90%;
+}

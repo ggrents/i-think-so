@@ -1,0 +1,104 @@
+::ng-deep {
+  .subscribe-button .pi {
+    margin-right: 10px;
+  }
+  .subscribe-button button {
+    background-color: #193dfb;
+    color: #fe6d2f;
+    border: 1px solid #fe6d2f;
+    transition: 0s;
+  }
+  .subscribe-button button:hover {
+    background-color: #fe6d2f;
+    color: #193dfb;
+    border: 1px solid #193dfb;
+  }
+  .answer-button button {
+    background-color: #fe6d2f;
+    color: #193dfb;
+    border: 1px solid #193dfb;
+    width: 200px;
+    transition: 0s;
+  }
+  .answer-button button:hover {
+    background-color: #193dfb;
+    color: #fe6d2f;
+    border: 1px solid #fe6d2f;
+  }
+}
+.survey-card {
+  background-color: #f4f8fd;
+  width: 67%;
+  margin: 5% auto;
+  height: 500px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.3vw;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      h3 {
+        font-weight: 300;
+      }
+    }
+  }
+
+  .survey__title {
+    margin: 1.5% 0 1.5% 0;
+    text-align: center;
+  }
+
+  .answers-wrapper {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .answers {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 10px 0 10px 0;
+
+      .answer-options {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .option-checkbox {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          justify-self: center;
+        }
+      }
+      .submit-btn {
+        align-self: center;
+      }
+    }
+
+    .survey-image {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 90%;
+        height: 90%;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<div class="survey-card">
+  <div class="survey-card__heading">
+    <div class="user-info">
+      <p-button icon="pi pi-user" severity="info" [outlined]="true"></p-button>
+      <h3>gggrents</h3>
+    </div>
+    <p-button
+      icon="pi pi-plus"
+      class="subscribe-button"
+      label="Subscribe"
+      size="small"
+    ></p-button>
+  </div>
+  <div class="survey__title">
+    <h2>Кто выиграет кубок Гагарина?</h2>
+  </div>
+  <div class="answers-wrapper">
+    <div class="answers">
+      <div class="answer-options">
+        <div *ngFor="let category of options" class="option-checkbox">
+          <p-radioButton
+            [inputId]="category.id"
+            name="category"
+            [value]="category"
+            [(ngModel)]="choice"
+          ></p-radioButton>
+          <label [for]="category.id" class="ml-2">{{ category.name }}</label>
+        </div>
+      </div>
+      <div class="submit-btn">
+        <p-button
+          icon="pi pi-check"
+          class="answer-button"
+          label="Submit"
+          size="small"
+        ></p-button>
+      </div>
+    </div>
+    <div class="survey-image">
+      <img
+        src="https://arc-anglerfish-tgam-prod-tgam.s3.amazonaws.com/public/TYQG5TDR5RFMXHO5QIFIJBLUVM.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
