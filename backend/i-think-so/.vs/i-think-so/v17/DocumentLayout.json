@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\i-think-so\\backend\\i-think-so\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3759836-841B-499D-A5FB-D23A90A1E073}|i-think-so\\i-think-so.csproj|c:\\users\\user\\desktop\\i-think-so\\backend\\i-think-so\\i-think-so\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3759836-841B-499D-A5FB-D23A90A1E073}|i-think-so\\i-think-so.csproj|solutionrelative:i-think-so\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 255,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -48,12 +53,17 @@
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\i-think-so\\backend\\i-think-so\\i-think-so\\Program.cs",
+              "RelativeDocumentMoniker": "i-think-so\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\i-think-so\\backend\\i-think-so\\i-think-so\\Program.cs",
+              "RelativeToolTip": "i-think-so\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T19:50:03.798Z",
+              "EditorCaption": ""
             }
           ]
         }

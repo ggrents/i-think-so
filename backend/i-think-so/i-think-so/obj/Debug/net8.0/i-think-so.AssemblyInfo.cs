@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("i-think-so")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96345d8168d3ccc55402b53f859c0b0752eafb00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4897b1d7486380edfef0b91a3ceb2e60bb9b518")]
 [assembly: System.Reflection.AssemblyProductAttribute("i-think-so")]
 [assembly: System.Reflection.AssemblyTitleAttribute("i-think-so")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
