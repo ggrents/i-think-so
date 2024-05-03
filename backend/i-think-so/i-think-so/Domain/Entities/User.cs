@@ -7,13 +7,14 @@ namespace i_think_so.Domain.Entities
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public required string Id { get; set; }
+        [BsonElement("_id")]
+        public string? Id { get; set; }
 
         public required string Username { get; set; }
 
-        public string Email { get; set; } = string.Empty;
+        public string? Email { get; set; } = string.Empty;
 
-        public required string PasswordHash { get; set; }
+        public required byte[] PasswordHash { get; set; }
     }
 
 }

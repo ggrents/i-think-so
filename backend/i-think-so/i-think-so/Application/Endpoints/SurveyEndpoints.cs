@@ -4,10 +4,12 @@
     {
         public static void MapSurveyEndpoints(this IEndpointRouteBuilder builder)
         {
-            var group = builder.MapGroup("/surveys").WithTags("Surveys");
+            var group = builder.MapGroup("/api/surveys").WithTags("Surveys");
 
             group.MapGet("", GetSurveys).WithDescription("Get list of surveys");
             group.MapGet("{id}", GetSurveyById);
+            group.MapGet("user/{id}", GetSurveyById);
+            group.MapGet("voted", GetSurveyById);
             group.MapPost("{id}", CreateSurvey);
             group.MapDelete("{id}", DeleteSurvey);
             group.MapPut("{id}", UpdateSurvey);

@@ -1,29 +1,55 @@
-﻿namespace i_think_so.Application.Endpoints
+﻿using i_think_so.Application.Models.Request;
+using i_think_so.Application.Services.Auth;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
+
+namespace i_think_so.Application.Endpoints
 {
     public static class UserEndpoints
     {
         public static void MapUserEndpoints(this IEndpointRouteBuilder builder)
         {
-            var group = builder.MapGroup("/account").WithTags("Account");
+            var group = builder.MapGroup("/api/account").WithTags("Account");
 
-            group.MapGet("register", Register);
-            group.MapGet("login", Login);
+            group.MapPost("register", Register);
+            group.MapPost("login", Login);
             group.MapGet("self", Self);
         }
 
-        public static IResult Register(HttpContext context, CancellationToken cancellationToken)
+        public async static Task<IResult> Register([FromBody] RegisterRequest user, [FromServices] IAuthService authService, CancellationToken cancellationToken)
         {
-            return Results.Empty;
+            try
+            {
+                await authService.RegisterAsync(user, cancellationToken);
+                return Results.Ok("User was registered successfully");
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
         }
 
-        public static IResult Login(HttpContext context, CancellationToken cancellationToken)
+        public async static Task<IResult> Login([FromBody] LoginRequest credentials, 
+            [FromServices] IAuthService authService, CancellationToken cancellationToken)
         {
-            return Results.Empty;
+            try
+            {
+                return Results.Ok(await authService.LoginAsync(credentials, cancellationToken));
+            }
+            catch (Exception ex) {
+                return Results.BadRequest(ex.Message);
+            }
         }
 
-        public static IResult Self(HttpContext context, CancellationToken cancellationToken)
+        public async static Task<IResult> Self(HttpContext context, [FromServices] IAuthService authService, CancellationToken cancellationToken)
         {
-            return Results.Empty;
+            try
+            {
+                return Results.Ok(await authService.SelfAsync(context, cancellationToken));
+            }
+            catch (Exception ex) {
+                return Results.BadRequest(ex.Message);
+            }
         }
 
     }

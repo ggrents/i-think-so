@@ -13,6 +13,7 @@ namespace i_think_so.Infrastructure.Database
             var client = new MongoClient(settings.Value.ConnectionString);
             _database = client.GetDatabase(settings.Value.DatabaseName);
         }
-        public IMongoCollection<Survey> Surveys=> _database.GetCollection<Survey>("surveys");
+        public IMongoCollection<Survey> Surveys => _database.GetCollection<Survey>("surveys");
+        public IMongoCollection<User> Users => _database.GetCollection<User>("users");
     }
 }
