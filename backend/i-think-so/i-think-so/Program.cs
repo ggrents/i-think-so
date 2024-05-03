@@ -1,6 +1,5 @@
 using i_think_so.Application.Endpoints;
 using i_think_so.Application.Extensions;
-using i_think_so.Application.Models.Request;
 using i_think_so.Application.Repository;
 using i_think_so.Application.Services;
 using i_think_so.Application.Services.Auth;
@@ -8,12 +7,24 @@ using i_think_so.Application.Services.Token;
 using i_think_so.Infrastructure;
 using i_think_so.Infrastructure.Database;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("angular-app",
+            policy =>
+            {
+                policy.WithOrigins(Enumerable.Range(4200, 100)
+                      .Select((port) => $"http://localhost:{port}")
+                      .ToArray())
+                      .AllowAnyHeader()
+                      .AllowAnyMethod();
+            });
+});
 
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDBSettings"));
 builder.Services.AddSingleton<MongoContext>();
@@ -83,6 +94,8 @@ builder.Services.AddEndpointsApiExplorer();
 
 
 var app = builder.Build();
+
+app.UseCors();
 
 if (app.Environment.IsDevelopment())
 {
