@@ -1,7 +1,13 @@
+using i_think_so.Application.Endpoints;
+using i_think_so.Application.Repository;
+using i_think_so.Domain.Entities;
 using i_think_so.Infrastructure;
+using i_think_so.Infrastructure.Database;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDBSettings"));
+builder.Services.AddSingleton<MongoContext>();
+builder.Services.AddScoped<ISurveyRepository, SurveyRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -16,12 +22,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/surveys", () =>
+app.MapPost("/surveys", (ISurveyRepository repo, Survey survey) =>
 {
-    return 2;
+    return repo.CreateSurveyAsync(survey);
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
+
+app.MapUserEndpoints();
+app.MapSurveyEndpoints();
 
 app.Run();
 

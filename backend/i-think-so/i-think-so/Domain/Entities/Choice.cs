@@ -2,6 +2,6 @@
 {
     public class Choice
     {
-        public required string UserId { get; set; }
+        public required string usid { get; set; }
     }
 }
