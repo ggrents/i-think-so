@@ -8,12 +8,4 @@ import { RouterLink } from '@angular/router';
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss',
 })
-export class WelcomeComponent {
-  ngOnInit() {
-    console.log(localStorage.getItem('1'));
-  }
-
-  setItem() {
-    localStorage.setItem('1', '2');
-  }
-}
+export class WelcomeComponent {}
