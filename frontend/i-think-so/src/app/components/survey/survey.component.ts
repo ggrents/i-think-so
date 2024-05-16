@@ -13,9 +13,9 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 })
 export class SurveyComponent {
   options: any[] = [
-    { id: 1, name: 'Первый вариант' },
-    { id: 2, name: 'Второй вариант' },
-    { id: 3, name: 'Третий вариант' },
+    { id: 1, name: 'Java' },
+    { id: 2, name: 'C#' },
+    { id: 3, name: 'Python' },
   ];
   choice: any;
 }

@@ -2,12 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Survey } from './models/survey.interface';
-import { environment } from '../environment';
+import { environment } from '../../env/environment';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ApiService {
+export class SurveyService {
   private baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
